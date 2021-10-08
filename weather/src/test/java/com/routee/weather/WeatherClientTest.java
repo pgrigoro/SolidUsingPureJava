@@ -1,4 +1,4 @@
-package com.routee.weather;
+package com.route.weather;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;

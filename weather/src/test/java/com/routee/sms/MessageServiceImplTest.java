@@ -1,4 +1,4 @@
-package com.routee.sms;
+package com.route.sms;
 
 import okhttp3.Response;
 import org.junit.Assert;

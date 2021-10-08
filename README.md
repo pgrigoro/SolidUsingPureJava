@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/pgrigoro/assessment/tree/master.svg?style=svg)](https://circleci.com/gh/pgrigoro/assessment/tree/master)
+[![CircleCI](https://circleci.com/gh/pgrigoro/SolidUsingPureJava/tree/master.svg?style=svg)](https://circleci.com/gh/pgrigoro/SolidUsingPureJava/tree/master)
 
 # Documentation
 

@@ -1,4 +1,4 @@
-package com.routee.sms;
+package com.route.sms;
 
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
@@ -12,8 +12,8 @@ import static java.lang.String.format;
 
 public class MessageServiceImpl implements MessageService {
 
-    private static final String API_URI = "https://connect.routee.net/sms";
-    private static final String AUTH_URI = "https://auth.routee.net/oauth/token";
+    private static final String API_URI = "https://connect.route.net/sms";
+    private static final String AUTH_URI = "https://auth.route.net/oauth/token";
     private static final String APPLICATION_JSON = "application/json";
     private static final String APPLICATION_X_WWW_FORM_URLENCODED = "application/x-www-form-urlencoded";
 

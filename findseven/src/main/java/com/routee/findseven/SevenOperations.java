@@ -1,4 +1,4 @@
-package com.routee.findseven;
+package com.route.findseven;
 
 import java.util.Arrays;
 

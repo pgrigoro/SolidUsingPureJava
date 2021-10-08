@@ -1,4 +1,4 @@
-package com.routee.digitsum;
+package com.route.digitsum;
 
 
 import org.junit.Assert;

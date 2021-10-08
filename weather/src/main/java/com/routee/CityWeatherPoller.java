@@ -1,10 +1,10 @@
-package com.routee;
+package com.route;
 
-import com.routee.sms.Message;
-import com.routee.sms.MessageService;
-import com.routee.sms.MessageServiceImpl;
-import com.routee.weather.WeatherClient;
-import com.routee.weather.WeatherClientImpl;
+import com.route.sms.Message;
+import com.route.sms.MessageService;
+import com.route.sms.MessageServiceImpl;
+import com.route.weather.WeatherClient;
+import com.route.weather.WeatherClientImpl;
 
 import java.time.Duration;
 import java.util.Objects;
@@ -74,11 +74,9 @@ public class CityWeatherPoller implements Runnable {
     private String getTemperatureMessage(Double temperature) {
         String textMessage;
         if(temperature.doubleValue() > config.getTemperatureLimit()) {
-            textMessage = format("Temperature more than %sC. %sC", config.getTemperatureLimit(), temperature.doubleValue());
-        } else if (temperature.doubleValue() == config.getTemperatureLimit()) {
-            textMessage = format("Temperature is %sC.", config.getTemperatureLimit());
+            textMessage = format("Your name and Temperature more than %sC. %sC", config.getTemperatureLimit(), temperature.doubleValue());
         } else {
-            textMessage = format("Temperature less than %sC. %sC", config.getTemperatureLimit(), temperature.doubleValue());
+            textMessage = format("Your name and Temperature less than %sC. %sC", config.getTemperatureLimit(), temperature.doubleValue());
         }
 
         return textMessage;
@@ -87,7 +85,7 @@ public class CityWeatherPoller implements Runnable {
     public static void main(String[] args) {
         PollerConfig config = PollerConfig.builder()
                 .city("Thessaloniki")
-                .temperatureLimit(20.0)
+                .temperatureLimit(20)
                 .maxExecutions(10)
                 .delay(Duration.ofMinutes(10))
                 .phoneNumber("+306922222222")

@@ -1,4 +1,4 @@
-package com.routee.weather;
+package com.route.weather;
 
 public class WeatherNotFoundException extends RuntimeException {
 

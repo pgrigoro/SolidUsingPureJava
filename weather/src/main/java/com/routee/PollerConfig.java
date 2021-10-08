@@ -1,4 +1,4 @@
-package com.routee;
+package com.route;
 
 import java.time.Duration;
 
@@ -7,7 +7,7 @@ import static java.util.Objects.requireNonNull;
 public class PollerConfig {
 
     private final String city;
-    private final Double temperatureLimit;
+    private final Integer temperatureLimit;
     private final Integer maxExecutions;
     private final Duration delay;
     private final String phoneNumber;
@@ -33,7 +33,7 @@ public class PollerConfig {
         return city;
     }
 
-    public Double getTemperatureLimit() {
+    public Integer getTemperatureLimit() {
         return temperatureLimit;
     }
 
@@ -55,7 +55,7 @@ public class PollerConfig {
 
     public static final class PollerConfigBuilder {
         private String city;
-        private Double temperatureLimit = 20.0;
+        private Integer temperatureLimit = 20;
         private String phoneNumber;
         private Integer maxExecutions = 10;
         private Duration delay = Duration.ofMinutes(1);
@@ -65,7 +65,7 @@ public class PollerConfig {
             return this;
         }
 
-        public PollerConfigBuilder temperatureLimit(Double temperatureLimit) {
+        public PollerConfigBuilder temperatureLimit(Integer temperatureLimit) {
             this.temperatureLimit = temperatureLimit;
             return this;
         }

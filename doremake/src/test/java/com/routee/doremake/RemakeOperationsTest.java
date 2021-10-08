@@ -1,4 +1,4 @@
-package com.routee.doremake;
+package com.route.doremake;
 
 import org.junit.Assert;
 import org.junit.Test;

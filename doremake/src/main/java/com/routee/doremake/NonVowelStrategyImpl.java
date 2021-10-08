@@ -1,4 +1,4 @@
-package com.routee.doremake;
+package com.route.doremake;
 
 public class NonVowelStrategyImpl implements WordStrategy {
 

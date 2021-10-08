@@ -1,9 +1,9 @@
-package com.routee;
+package com.route;
 
-import com.routee.sms.Message;
-import com.routee.sms.MessageService;
-import com.routee.weather.WeatherClient;
-import com.routee.weather.WeatherClientImpl;
+import com.route.sms.Message;
+import com.route.sms.MessageService;
+import com.route.weather.WeatherClient;
+import com.route.weather.WeatherClientImpl;
 import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.Test;
@@ -26,7 +26,7 @@ public class CityWeatherPollerTest {
             }
 
             @Override public Double getTemperature(String city) {
-                return Double.valueOf(20);
+                return Double.valueOf(18);
             }
         };
         MessageService messageService = message -> {
@@ -36,7 +36,7 @@ public class CityWeatherPollerTest {
 
         PollerConfig config = PollerConfig.builder()
                 .city("Thessaloniki")
-                .temperatureLimit(20.0)
+                .temperatureLimit(20)
                 .maxExecutions(1)
                 .delay(Duration.ofMillis(1000))
                 .phoneNumber("+306922222222")
@@ -47,7 +47,7 @@ public class CityWeatherPollerTest {
         Message message = generatedMessages[0];
         Assert.assertNotNull(message);
         Assert.assertEquals("+306922222222", message.getPhone());
-        Assert.assertEquals("Temperature is 20.0C.", message.getText());
+        Assert.assertEquals("Your name and Temperature less than 20C. 18.0C", message.getText());
     }
 
 

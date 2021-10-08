@@ -1,8 +1,8 @@
-package com.routee.doremake;
+package com.route.doremake;
 
 import java.util.Arrays;
 
-import static com.routee.doremake.WordStrategy.SPACE;
+import static com.route.doremake.WordStrategy.SPACE;
 import static java.util.stream.Collectors.joining;
 
 public class RemakeOperations {

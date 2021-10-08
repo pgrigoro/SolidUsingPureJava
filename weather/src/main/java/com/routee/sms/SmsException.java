@@ -1,4 +1,4 @@
-package com.routee.sms;
+package com.route.sms;
 
 public class SmsException extends RuntimeException {
 
